@@ -3,7 +3,7 @@
   Download [driver http://jdbc.postgresql.org/download.html] JDBC Postgres 9.4
 
   Create database juris
-			`CREATE DATABASE gelias
+  			`CREATE DATABASE gelias
 			  WITH OWNER = gelias
 			       ENCODING = 'UTF8'
 			       TABLESPACE = pg_default
@@ -11,7 +11,7 @@
 			       LC_CTYPE = 'C'
 			       CONNECTION LIMIT = -1;`
 
-	Create table customer
+  Create table customer
 			`CREATE TABLE customer
 			(
 			  codigo bigint NOT NULL,
