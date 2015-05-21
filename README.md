@@ -1,6 +1,6 @@
 # imed-dojo-jdbc
 
-  Download [driver http://jdbc.postgresql.org/download.html] JDBC Postgres 9.4
+  Download [driver] (http://jdbc.postgresql.org/download.html) JDBC Postgres 9.4
 
   Create database juris
   			
