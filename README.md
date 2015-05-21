@@ -4,17 +4,17 @@
 
   Create database juris
   			
-  			`CREATE DATABASE gelias
+  			CREATE DATABASE gelias
 			  WITH OWNER = gelias
 			       ENCODING = 'UTF8'
 			       TABLESPACE = pg_default
 			       LC_COLLATE = 'C'
 			       LC_CTYPE = 'C'
-			       CONNECTION LIMIT = -1;`
+			       CONNECTION LIMIT = -1;
 
   Create table customer
 			
-			`CREATE TABLE customer
+			CREATE TABLE customer
 			(
 			  codigo bigint NOT NULL,
 			  nome character varying NOT NULL,
@@ -24,4 +24,4 @@
 			  OIDS=FALSE
 			);
 			ALTER TABLE customer
-			  OWNER TO postgres;`
+			  OWNER TO postgres;
