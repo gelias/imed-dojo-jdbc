@@ -1,7 +1,8 @@
 # imed-dojo-jdbc
 
   Download [driver http://jdbc.postgresql.org/download.html] JDBC Postgres 9.4
-	Create database juris
+
+  Create database juris
 			`CREATE DATABASE gelias
 			  WITH OWNER = gelias
 			       ENCODING = 'UTF8'
