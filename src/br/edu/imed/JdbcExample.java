@@ -41,21 +41,25 @@ public class JdbcExample {
 			System.out.println("Connection Failed! Check output console");
 			e.printStackTrace();
 			return;
-
 		}
-
 	}
 
-	private static void runInsertCommando(Connection connection, Customer customer) {
+	private static void runInsertCommando(Connection connection, Customer customer) throws SQLException {
+		PreparedStatement prepareStatement = null;
 		try {
+			connection.setAutoCommit(false);
 			String insertCommand = "INSERT INTO CUSTOMER(codigo, nome) VALUES (?, ?)";
-			PreparedStatement prepareStatement = connection.prepareStatement(insertCommand);
+			prepareStatement = connection.prepareStatement(insertCommand);
 			prepareStatement.setLong(1, customer.getCodigo());
 			prepareStatement.setString(2, customer.getName());
 			prepareStatement.executeUpdate();
-			prepareStatement.close();
+			connection.commit();
+
 		} catch (SQLException e) {
 			e.printStackTrace();
+			connection.rollback();
+		} finally{
+			prepareStatement.close();
 		}
 	}
 
