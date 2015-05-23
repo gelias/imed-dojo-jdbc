@@ -34,6 +34,7 @@ public class JdbcExample {
 			connection = DriverManager.getConnection(connectionString, user, password);
 			checkConnection(connection);
 			runSelectCommand(connection);
+			runInsertCommando(connection, new Customer(0L,""));
 			connection.close();			
 
 		} catch (SQLException e) {
